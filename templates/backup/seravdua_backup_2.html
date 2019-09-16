@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+<!--
+h1 {
+  background-color: blue;
+}
+h4 {
+  background-color: blue;
+}
+.style4 {
+	color: #330066;
+	font-weight: bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 36px;
+}
+-->
+</style>
+<body background="../static/background.jpg">
+	<h1>
+		<div align="center"><span class="style4">SERA ALPHA</span></div>
+	</h1>
+	<a href="{{ url_for('rec') }}">
+		<button>  
+			<div align="center"><strong>RECORD </strong></div>
+		</button> 
+	</a>
+	<h3 align="center"> {{ msg }} </h3>
+	<div align="center">{{ hasil }}    </div>
+	<h4 align="center">@2019 SERA Development Team </h4>
+</body>
+</html>

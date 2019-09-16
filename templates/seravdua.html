@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+<style>
+header{
+    background:#333;
+    padding:10px;
+	color:#fff;
+}
+footer{
+    height:100px;
+    line-height:50px;
+    background:#333;
+    color:#fff;
+ 
+    position:absolute;
+    bottom:10px;
+ 
+    width:100%; /*biar memenuhi layar*/
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 32px 32px;
+    border: 7px solid #5e4848;
+    border-radius: 29px;
+    background: #857272;
+    background: -webkit-gradient(linear, left top, left bottom, from(#857272), to(#4d3a3a));
+    background: -moz-linear-gradient(top, #857272, #4d3a3a);
+    background: linear-gradient(to bottom, #857272, #4d3a3a);
+    -webkit-box-shadow: #ff5959 0px 0px 40px 0px;
+    -moz-box-shadow: #ff5959 0px 0px 40px 0px;
+    box-shadow: #ff5959 0px 0px 40px 0px;
+    text-shadow: #591717 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:hover,
+.button:focus {
+    border: 7px solid #967373;
+    background: #a08989;
+    background: -webkit-gradient(linear, left top, left bottom, from(#a08989), to(#5c4646));
+    background: -moz-linear-gradient(top, #a08989, #5c4646);
+    background: linear-gradient(to bottom, #a08989, #5c4646);
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:active {
+    background: #504444;
+    background: -webkit-gradient(linear, left top, left bottom, from(#504444), to(#4d3a3a));
+    background: -moz-linear-gradient(top, #504444, #4d3a3a);
+    background: linear-gradient(to bottom, #504444, #4d3a3a);
+}
+.button:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAB6klEQVRIiaXUwWpTURAG4M9LFqGIiIi4ktIHKC4VpFTxAbqQLHQvIn0CESSLrkqR4qpLFyJd5gmCuhB17RNIKAgKLoqKmLi4c83JyblJxAOTO2dm/pnMf84cqFaQHbzCdzxfEdNI/bMg4BATvMM+bmEN5xLs5UKev7mbjdQY60Ekf5jYOxjgTRTp4RtuZNhqTsn2XYxwbH718BMf8SspVlxt1GzGv7/T4n8W/lNcWZBnrq1mvx0JtgudtnUwR1FOzziktBp7B/fwHtdD3wwprrbW0g5yX3qLKlxqy9PJ/l1TMO9inNl/JHqFzwVshXFOUV5smf0CtnC+BTM3HOvoYwNfw3fRfOsN5jaG6lu0gSeRo3XQ0qvZxSfTOSgN0XHEdAMzMT3s4qCdVU/lfuxLk0x9k3bDdz9sB4Fdk62cppfqCe6afYs+RJKD0Cd4anqrRnihQGd+0FfVw7OXBO2ouT4NGYat8e8FJp2F1rcIHuN30FDyp9jdiH20KKj5lp7pAa6peW98nbANIuawgG+lKC14V83tBCd4G3IStlHEVBl2Rl9EAfVh93CELyFHYesuwTpjOt7LClEfLtxcIZYsafqStun+MX7pW/TfeicxlIptmaVjPb79xDbE6wK2NXG676tvyyLpt2Ar+ANkmoPQ8IxA5wAAAABJRU5ErkJggg==") no-repeat left center transparent;
+    background-size: 100% 100%;
+}
+
+</style>
+</head>
+<body>
+	<header>
+		<table style="width:100%">
+			<tr>
+				<th width="25%">
+					<h1 align="right">
+						<input type="image" src="/static/logo.jpg" width="100" height"100" align="center">
+					</h1>
+			 	</th>
+				<th width="75%">
+					<h1  align="left"><span class="style4">SPEECH EMOTIONAL RECOGNITION APPLICATION</span></h>
+				</th> 
+			</tr>
+		</table>
+	</header>
+	<p></p>	
+	<p align="center"><strong>DETEKSI EMOSIMU MELALUI SUARA. REKAM SEKARANG !</strong></p>
+	<table style="width:100%">
+		<tr>
+			<th width="50%">
+				<div align="right">
+					<a class="button" href="{{ url_for('rec') }}">RECORD</a>  
+				</div>
+			</th>
+			<th width="50%">
+				<div align="left">
+					<a class="button" href="{{ url_for('play') }}">PLAY</a>  
+				</div>
+			</th>
+		</tr>
+	</table>
+	<h3 align="center"> {{ msg }} </h3>
+	<h2 align="center">{{ hasil }}</h2>
+<footer>
+		<h4 align="center">@ 2019 SERA Development Team | FTUI | Artificial Intellegence 03 </h4>
+</footer>
+</body>
+</html>

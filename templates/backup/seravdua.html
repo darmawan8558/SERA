@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+<style>
+header{
+    background:#333;
+    padding:10px;
+	color:#fff;
+}
+footer{
+    height:100px;
+    line-height:50px;
+    background:#333;
+    color:#fff;
+ 
+    position:absolute;
+    bottom:10px;
+ 
+    width:100%; /*biar memenuhi layar*/
+}
+</style>
+</head>
+<body>
+	<header>
+		<h1>
+			<div align="center"><span class="style4">SERA ALPHA</span></div>
+		</h1>
+	</header>
+	<a href="{{ url_for('rec') }}">
+		<div align="center">
+			<input type="image" src="./static/mic.png" width="250" height"250" class="btn btn-success" align="center">  
+		</div>
+	</a>
+	<h3 align="center"> {{ msg }} </h3>
+	<h1 align="center">{{ hasil }}</h1> 
+	<footer>
+	<h4 align="center">@ 2019 SERA Development Team </h4>
+	</footer>
+</body>
+</html>
